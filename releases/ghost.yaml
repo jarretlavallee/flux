@@ -29,3 +29,8 @@ spec:
       master:
         persistence:
           enabled: false
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: traefik
+      
