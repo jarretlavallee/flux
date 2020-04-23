@@ -218,7 +218,7 @@ resources:
 ##
 ingress:
   ## Set to true to enable ingress record generation
-  enabled: false
+  enabled: true
 
   ## Set this to true in order to add the corresponding annotations for cert-manager
   certManager: false
@@ -230,6 +230,7 @@ ingress:
   ## If tls is set to true, annotation ingress.kubernetes.io/secure-backends: "true" will automatically be set
   ## If certManager is set to true, annotation kubernetes.io/tls-acme: "true" will automatically be set
   annotations:
+    kubernetes.io/ingress.class: traefik
   #  kubernetes.io/ingress.class: nginx
 
   ## The list of hostnames to be covered with this ingress record.
