@@ -1,0 +1,19 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: metallb
+  namespace: kube-system
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.chart-image: semver:*
+spec:
+  releaseName: metallb
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: metallb
+  values:
+    address-pools:
+      - name: default
+        protocol: layer2
+        addresses: 192.168.5.80-192.168.5.90
