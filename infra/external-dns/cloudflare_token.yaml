@@ -1,0 +1,39 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: external-dns
+  namespace: infra
+spec:
+  encryptedData:
+    cloudflare_api_token: AgBOMvzOOcj4UxnGL9/4FPBMqLSxUhyejg7gws7vbGWNGUIYfBFv4ZkVDYcOt/dIKCI/S7SY0Dxw0rfBDBMe0zQw1tvXWqNGkzvv0YVD5wm1ZCb54E7knEuTk9J/0U2yogINfNCgZgd4Clao97XjRWukB9SRqiaoNQVRUaSv35Dwv3aFAudHthb8DZp4/QlvniVM8oVBQXHOCGTZVm3g05HChgzzOUsZynBSQuuycq03ZvSQJcw+d0Pj3sC2hsSxST7RqnyBu//Y1OZbEKPWM8iblA97ohEAkZVeBDhFJec1AffNXcuNjOiBo1OkmPE4qMwWe87U/+Y6+rgz4dseNhl5U3H7UlH/w5OQKJi/pOrJffiS7QqdzpER4HYrH1UDWiI9wXNA0o9GWxgO9Y5A2rWneLCykZ97+XwnG32QCBnwmwoHdr+93cpuIyXIe9bk/DrYezMqePByfdjAayetZ+U2JEG6tFABMnWW1S6yxVFxDzCQZUIEI/cLgXWedOJwKkh5svviWBxJ0xcyMLE60MrOzYJvoqBDC4B7k14NVwFaYEuS1nuxwonKqU8uiViWuqpTA10YEOzWAwOrDLFx/sF3XLS8THsOk33lQcPm19xEFX+bexiSBdNhjp1Dgh890pjf0a6kCJapAiiJ+Gwj/dgwsOKp/7oGBgx/OVBZxVFzeVDiw5Xn0ByXKLERec8S2ALXimGB/a3vo2TBiCOE91TR+x4XnoaU3hLJsgVlpTlMDFRzYfElyYa+
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: external-dns
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: external-dns
+        helm.sh/chart: external-dns-2.21.2
+      managedFields:
+      - apiVersion: v1
+        fieldsType: FieldsV1
+        fieldsV1:
+          f:data:
+            .: {}
+            f:cloudflare_api_token: {}
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+              f:helm.sh/chart: {}
+          f:type: {}
+        manager: Go-http-client
+        operation: Update
+        time: "2020-04-24T19:51:10Z"
+      name: external-dns
+      namespace: kube-system
+    type: Opaque
+

@@ -18,7 +18,9 @@ spec:
       enabled: "true"
       annotations:
         kubernetes.io/ingress.class: traefik
+        external-dns.alpha.kubernetes.io/hostname: dashboard.hubnut.ga
+        external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
       hosts:
-        - dashboard.hubnut.local
+        - dashboard.hubnut.ga
     metrics-server:
       enabled: true
