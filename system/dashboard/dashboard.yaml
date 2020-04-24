@@ -1,0 +1,22 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: kubernetes-dashboard
+  namespace: kube-system
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: kubernetes-dashboard
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: kubernetes-dashboard
+    version: 1.10.1
+  values:
+    ingress:
+      enabled: "true"
+      annotations:
+        kubernetes.io/ingress.class: traefik
+      hosts:
+        - dashboard.hubnut.local
