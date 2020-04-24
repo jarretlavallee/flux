@@ -20,6 +20,8 @@ spec:
         kubernetes.io/ingress.class: traefik
       hosts:
         - grafana.hubnut.local
+    persistence:
+      storageClassName: standard
     sidecar:
       datasources:
         enabled: true

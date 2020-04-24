@@ -13,3 +13,7 @@ spec:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: prometheus
     version: 11.1.2
+  values:
+    server:
+      persistentVolume:
+        storageClass: standard
