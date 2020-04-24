@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import the private key (not in this repo)
-kubectl apply -f sealed-secrets-key.yaml
+kubectl apply -f local/sealed-secrets-key.yaml
 # Set up Sealed Secrets
 helm install --namespace kube-system sealed-secrets stable/sealed-secrets
 
