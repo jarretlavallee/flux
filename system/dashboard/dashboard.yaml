@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: kubernetes-dashboard
   chart:
-    repository: https://kubernetes.github.io/dashboard/
+    repository: https://funkypenguin.github.io/helm-kubernetes-dashboard/
     name: kubernetes-dashboard
     version: 2.0.0-rc7-fp6
   values:
