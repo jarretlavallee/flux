@@ -1,0 +1,25 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: traefik
+  namespace: kube-system
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: traefik
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: traefik
+    version: 1.86.2
+  values:
+    rbac:
+      enabled: "true"
+    dashboard:
+      enabled: "true"
+      domain: "traefik.hubnut.local"
+    ssl:
+      enabled: "true"
+      generateTLS: "true"
+      insecureSkipVerify: "true"
