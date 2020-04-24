@@ -12,7 +12,7 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: grafana
-    version: 11.1.2
+    version: 5.0.13
   values:
     ingress:
       enabled: "true"
