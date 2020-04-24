@@ -1,0 +1,29 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: grafana
+  namespace: monitoring
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: grafana
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: grafana
+    version: 11.1.2
+  values:
+    ingress:
+      enabled: "true"
+      annotations:
+        kubernetes.io/ingress.class: traefik
+      hosts:
+        - grafana.hubnut.local
+    sidecar:
+      datasources:
+        enabled: true
+        label: grafana_datasource
+      dashboards:
+        enabled: true
+        label: grafana_dashboard

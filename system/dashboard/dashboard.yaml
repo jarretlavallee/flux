@@ -21,4 +21,4 @@ spec:
       hosts:
         - dashboard.hubnut.local
     metrics-server:
-      enabled: "true"
+      enabled: true
