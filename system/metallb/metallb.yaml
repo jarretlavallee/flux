@@ -11,7 +11,7 @@ spec:
   releaseName: metallb
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
-    name: stable/metallb
+    name: metallb
     version: 0.12.0
   values:
     address-pools:
