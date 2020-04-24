@@ -10,9 +10,9 @@ metadata:
 spec:
   releaseName: kubernetes-dashboard
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com/
+    repository: https://kubernetes.github.io/dashboard/
     name: kubernetes-dashboard
-    version: 1.10.1
+    version: 2.0.0-rc7-fp6
   values:
     ingress:
       enabled: "true"
@@ -20,3 +20,5 @@ spec:
         kubernetes.io/ingress.class: traefik
       hosts:
         - dashboard.hubnut.local
+    metrics-server:
+      enabled: "true"
