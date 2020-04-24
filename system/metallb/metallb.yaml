@@ -5,13 +5,14 @@ metadata:
   name: metallb
   namespace: kube-system
   annotations:
-    fluxcd.io/automated: "true"
-    fluxcd.io/tag.chart-image: semver:*
+    fluxcd.io/automated: "false"
+    filter.fluxcd.io/chart-image: glob:*
 spec:
   releaseName: metallb
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: stable/metallb
+    version: 0.12.0
   values:
     address-pools:
       - name: default
