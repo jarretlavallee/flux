@@ -2,14 +2,14 @@
   "kind": "SealedSecret",
   "apiVersion": "bitnami.com/v1alpha1",
   "metadata": {
-    "name": "external-dns",
+    "name": "external-dns-cloudflare",
     "namespace": "infra",
     "creationTimestamp": null
   },
   "spec": {
     "template": {
       "metadata": {
-        "name": "external-dns",
+        "name": "external-dns-cloudflare",
         "namespace": "infra",
         "creationTimestamp": null,
         "labels": {
@@ -32,7 +32,7 @@
       "type": "Opaque"
     },
     "encryptedData": {
-      "cloudflare_api_token": "AgAGD5EkmLwrkESPp/+c1nbeKy2Rb5YOSyQKxDmkQ8kbDN3IiIKahzctUDgiM92Juac14e3JeUKGrNLLEGVUd47fIOmCFuXEMyM+EzYzOOP84wfO1qD/aSvOn03zvoZNQlOzhnjAxZcuF7+GmnPa8jg/FKD3jYAePmOF27m2Ys8jMbYC7XuNPt58F5A8H2dGRDeJwiNZdMHibX48UieC3kq+9v5S2ErjzlhTYW7Ehu4i/FTAIPAB2jkejqsg/Ch9B4N2rh4Knv8R2zo/JwqcGoPDLgur7jdHNM5zYHAWbMiXTMTXz3/ZQKF3DYx30E2Awf+IZL+0Qm7+XTN7eGibfvTzi70Gt9Xy9m6FLqVbeM52aUYoSYFNGloavSPdknVazMjDGpHQ4g3CYuvmz4AMIBBREyya0ekWUVXdSQwwZMNGU6VPPepn4ibESc9V7fa9Yhs7natvZDs2EyzO4cCuQ0x8LzkCOsj2Zo/U6WR7qnygnhhR9TR5JhRDBr6vmTRNKg/mpnIDsZg5RbTqyy2SWBocF7xUViSZ9Fp0yXO6gpQ6y85hYn2yvxeZsO0aEpKKQqSrhXGDBMTCF+Zcjrk5ZBiHw4a8YFgiFeJ/J3nXFkHniK8FYmpbm2ozE2n7zF5jaAvNCFW3tUUlN3zmh6GviIiUeqGDLncUQanBus7ZWD1kVr7dI899sL634iQyu/dKbzXwYwgsRdU4piMvc0YQx/SbYBDFmAgKPiw5IhZ14rZKQvdnaWDIPYat"
+      "cloudflare_api_token": "AgA8pX9esLDy7rATNzRk0LXol4acp+qchIxWA9rDvgG2SJ+1UPafSzJL5Ts71zIErekjyT2Vr89EMQy+4C73NvGyhyPOeNxmYLwMN61uwxTqA9f5PrG8Wlqof2GUKQoJslloxyiO2ulwwmDeslABgi4VX337oyCU8jktHldDVnXkuXutWXq02r/FaIq73yfzGF05N2DnBMzrjDIkIYvp76EAmBMXT5sOIigOBowyLyGwRs5HAtQcXuNhRJ/SqkDw2hAZF+Z6zYfm+NMQYaB5pLmp7kqz0vpBsQbbWs1Crdkzgcr6NoxmA+lBqcMNDnXogg2eAaH7g4LZhqdubZmQyVnqW+WnpfpH9HyOERzoD31Cuul+eAoSXr6iRJtRAdoAEpe2O08XasEvOCB6OXLjznolu/TVcQzDnyxaPz/E/Sl4bbmxk/7u/Xn6xk2k2aCOotpu99lcskKdAQqzWIPkmgASWCa9kWw4EgtD8dFI3OxZ/HsKNcCK9zeNR63vgPkONxYxN/QmS8fJiGSXDMmbQUmEXEXv3gfC9WDHyEtSuOpJ2WkD2JRlHmH9hwu9JHfs2VG/D2PFU4HA2ugAiWNr3cI0KEM+v/2iCjZoVXSbajUVZN+lpNVigH7EF/z5GTnv98UluBgTxLJppJ7zNTs6O8oD8P4CpYeeM2HacSGfWByag2SjtEkMlNvvL/N3yZ63rE7HgKULNBSS2F6gYt9ScCDt9W7fTJXJ9JuBL8hJPPJHs+jiN7NgQeq4"
     }
   }
 }
