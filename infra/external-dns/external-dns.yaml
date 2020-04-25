@@ -15,7 +15,7 @@ spec:
     version: 2.21.2
   values:
     provider: cloudflare
-    cloudfare:
+    cloudflare:
       secretName: external-dns-cloudflare
       apiToken: noop
     metrics:
