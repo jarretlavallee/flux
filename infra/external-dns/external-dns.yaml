@@ -18,5 +18,6 @@ spec:
     cloudflare:
       secretName: external-dns-cloudflare
       apiToken: noop
+      proxied: false
     metrics:
       enabled: true
