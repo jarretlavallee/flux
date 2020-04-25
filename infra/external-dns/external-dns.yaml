@@ -17,3 +17,6 @@ spec:
     provider: cloudflare
     cloudfare:
       secretName: external-dns-cloudflare
+      apiToken: noop
+    metrics:
+      enabled: true
