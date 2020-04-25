@@ -17,5 +17,3 @@ spec:
     provider: cloudflare
     cloudfare:
       secretName: external-dns-cloudflare
-    metrics:
-      enabled: true
