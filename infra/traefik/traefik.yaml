@@ -17,10 +17,5 @@ spec:
     service:
       annotations:
         external-dns.alpha.kubernetes.io/hostname: traefik.hubnut.ga
-    ports:
-      traefik:
-        expose: true
     additionalArguments:
-      - --log.level=DEBUG
-        #- "--providers.kubernetesingress"
       - "--api.insecure=true"
