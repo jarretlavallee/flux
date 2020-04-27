@@ -14,16 +14,10 @@ spec:
     name: grafana
     version: 5.0.13
   values:
-    #    service:
-    #      annotations:
-    ingress:
-      enabled: "true"
+    service:
       annotations:
-        kubernetes.io/ingress.class: nginx
         external-dns.alpha.kubernetes.io/hostname: grafana.hubnut.ga
         external-dns.alpha.kubernetes.io/target: nginx.hubnut.ga
-      hosts:
-        - grafana.hubnut.ga
     persistence:
       storageClassName: standard
     sidecar:
