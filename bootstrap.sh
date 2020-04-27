@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# kubeadm init --pod-network-cidr=192.168.0.0/16
+# kubectl apply -f system/calico/calico.yaml
+# kubectl taint nodes --all node-role.kubernetes.io/master-
+
 # Import the private key (not in this repo)
 kubectl apply -f local/sealed-secrets-key.yaml
 # Set up Sealed Secrets
