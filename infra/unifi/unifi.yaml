@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: unifi
   chart:
-    repository: https://kubernetes-charts-incubator.storage.googleapis.com
+    repository: https://kubernetes-charts.storage.googleapis.com
     name: unifi
     version: 0.7.0
   values:
