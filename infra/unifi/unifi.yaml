@@ -16,8 +16,28 @@ spec:
   values:
     persistence:
       storageClass: standard
-    unifiedService:
+    guiService:
       enabled: true
       type: LoadBalancer
+      loadBalancerIP: 192.168.5.89
       annotations:
         external-dns.alpha.kubernetes.io/hostname: unifi.hubnut.ga
+        metallb.universe.tf/allow-shared-ip: "true"
+    controllerService:
+      enabled: true
+      type: LoadBalancer
+      loadBalancerIP: 192.168.5.89
+      annotations:
+        metallb.universe.tf/allow-shared-ip: "true"
+    stunService:
+      enabled: true
+      type: LoadBalancer
+      loadBalancerIP: 192.168.5.89
+      annotations:
+        metallb.universe.tf/allow-shared-ip: "true"
+    discoveryService:
+      enabled: true
+      type: LoadBalancer
+      loadBalancerIP: 192.168.5.89
+      annotations:
+        metallb.universe.tf/allow-shared-ip: "true"
