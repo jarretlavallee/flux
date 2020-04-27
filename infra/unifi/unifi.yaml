@@ -1,0 +1,23 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: unifi
+  namespace: infra
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: unifi
+  chart:
+    repository: https://kubernetes-charts-incubator.storage.googleapis.com
+    name: unifi
+    version: 0.7.0
+  values:
+    persistence:
+      storageClass: standard
+    unifiedService:
+      enabled: true
+      type: LoadBalancer
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: unifi.hubnut.ga

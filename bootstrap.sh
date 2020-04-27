@@ -15,7 +15,8 @@ kubectl apply -f flux/flux-git-deploy.yaml
 helm repo add fluxcd https://charts.fluxcd.io
 helm upgrade -i flux fluxcd/flux \
   --namespace flux \
-  --set git.url=git@github.com:jarretlavallee/flux
+  --set git.url=git@github.com:jarretlavallee/flux \
+  --set syncGarbageCollection.enabled=true
 
 helm upgrade -i helm-operator fluxcd/helm-operator \
   --namespace flux \
