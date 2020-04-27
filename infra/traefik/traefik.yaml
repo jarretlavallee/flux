@@ -19,4 +19,6 @@ spec:
         external-dns.alpha.kubernetes.io/hostname: traefik.hubnut.ga
     additionalArguments:
       - --log.level=DEBUG
-      #      - "--providers.kubernetesingress"
+        #- "--providers.kubernetesingress"
+      - "--api.insecure=true"
+      - "--api.dashboard=true"
