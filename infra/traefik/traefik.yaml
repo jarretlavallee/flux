@@ -17,5 +17,5 @@ spec:
     service:
       annotations:
         external-dns.alpha.kubernetes.io/hostname: traefik.hubnut.ga
-    additionalArguments:
-      - "--providers.kubernetesingress"
+        #    additionalArguments:
+      #      - "--providers.kubernetesingress"
