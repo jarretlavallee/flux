@@ -14,14 +14,14 @@ spec:
     name: grafana
     version: 5.0.13
   values:
-    service:
-      annotations:
-        external-dns.alpha.kubernetes.io/hostname: grafana.hubnut.ga
-        external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
+    #    service:
+    #      annotations:
     ingress:
       enabled: "true"
       annotations:
         kubernetes.io/ingress.class: traefik
+        external-dns.alpha.kubernetes.io/hostname: grafana.hubnut.ga
+        external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
       hosts:
         - grafana.hubnut.ga
     persistence:
