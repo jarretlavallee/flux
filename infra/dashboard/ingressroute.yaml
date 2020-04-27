@@ -1,0 +1,14 @@
+# dashboard.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kubernetes-dashboard
+spec:
+  entryPoints:
+    - kubernetes-dashboard
+  routes:
+    - match: Host(`dashboard.hubnut.ga`)
+      kind: Rule
+      services:
+        - name: kubernetes-dashboard
+          port: 80

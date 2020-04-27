@@ -1,0 +1,23 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: kubernetes-dashboard
+  namespace: kube-system
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: kubernetes-dashboard
+  chart:
+    repository: https://funkypenguin.github.io/helm-kubernetes-dashboard/
+    name: kubernetes-dashboard
+    version: 2.0.0-rc7-fp6
+  values:
+    service:
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: dashboard.hubnut.ga
+        external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
+    metrics-server:
+      enabled: true
+    protocolHttp: true
