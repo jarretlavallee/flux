@@ -21,3 +21,4 @@ spec:
       proxied: false
     metrics:
       enabled: true
+    policy: sync
