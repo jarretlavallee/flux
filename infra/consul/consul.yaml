@@ -1,0 +1,25 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: consul
+  namespace: infra
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: consul
+  chart:
+    repository: https://github.com/hashicorp/consul-helm
+    name: consul
+    path: .
+    ref: v0.20.1
+  values:
+    service:
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: consul.hubnut.ga
+        external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
+    server:
+      storageClass: standard
+    ui:
+      type: ClusterIP
