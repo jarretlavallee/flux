@@ -2,14 +2,14 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: consul
+  name: consul-consul-ui
   namespace: infra
 spec:
   routes:
     - match: Host(`consul.hubnut.ga`)
       kind: Rule
       services:
-        - name: consul
+        - name: consul-consul-ui
           kind: Service
           port: 80
           scheme: http
