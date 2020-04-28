@@ -23,3 +23,6 @@ spec:
       storageClass: standard
     ui:
       type: ClusterIP
+    syncCatalog:
+      enabled: true
+      toK8S: false
