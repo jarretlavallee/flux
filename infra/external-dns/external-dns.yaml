@@ -21,4 +21,7 @@ spec:
       proxied: false
     metrics:
       enabled: true
+      podAnnotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "7979"
     policy: sync
