@@ -19,6 +19,5 @@ spec:
         external-dns.alpha.kubernetes.io/hostname: traefik.hubnut.ga
     additionalArguments:
       - "--api.insecure=true"
-    metrics:
-      prometheus:
-        enabled: true
+      - "--metrics.prometheus.addServicesLabels=true"
+      - "--metrics.prometheus=true"
