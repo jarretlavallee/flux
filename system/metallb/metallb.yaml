@@ -14,7 +14,10 @@ spec:
     name: metallb
     version: 0.12.0
   values:
-    address-pools:
-      - name: default
-        protocol: layer2
-        addresses: 192.168.5.80-192.168.5.90
+    prometheus:
+      scrapeAnnotations: true
+    configInline:
+      address-pools:
+        - name: default
+          protocol: layer2
+          addresses: 192.168.5.80-192.168.5.99
