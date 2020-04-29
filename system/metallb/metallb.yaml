@@ -20,4 +20,5 @@ spec:
       address-pools:
         - name: default
           protocol: layer2
-          addresses: 192.168.5.80-192.168.5.99
+          addresses:
+            - 192.168.5.80-192.168.5.99
