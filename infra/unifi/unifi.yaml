@@ -22,22 +22,22 @@ spec:
       loadBalancerIP: 192.168.5.89
       annotations:
         external-dns.alpha.kubernetes.io/hostname: unifi.hubnut.ga
-        metallb.universe.tf/allow-shared-ip: "true"
+        metallb.universe.tf/allow-shared-ip: "unifi"
     controllerService:
       enabled: true
       type: LoadBalancer
       loadBalancerIP: 192.168.5.89
       annotations:
-        metallb.universe.tf/allow-shared-ip: "true"
+        metallb.universe.tf/allow-shared-ip: "unifi"
     stunService:
       enabled: true
       type: LoadBalancer
       loadBalancerIP: 192.168.5.89
       annotations:
-        metallb.universe.tf/allow-shared-ip: "true"
+        metallb.universe.tf/allow-shared-ip: "unifi"
     discoveryService:
       enabled: true
       type: LoadBalancer
       loadBalancerIP: 192.168.5.89
       annotations:
-        metallb.universe.tf/allow-shared-ip: "true"
+        metallb.universe.tf/allow-shared-ip: "unifi"
