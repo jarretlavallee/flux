@@ -15,7 +15,7 @@ spec:
     version: 0.7.0
   values:
     persistence:
-      storageClass: nfs
+      existingClaim: data-unifi
     guiService:
       enabled: true
       type: LoadBalancer
