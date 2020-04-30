@@ -26,3 +26,6 @@ spec:
     syncCatalog:
       enabled: true
       toK8S: false
+    replicas: 2
+    disruptionBudget:
+      enabled: false
