@@ -19,7 +19,7 @@ spec:
         external-dns.alpha.kubernetes.io/hostname: grafana.hubnut.ga
         external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
     persistence:
-      storageClassName: standard
+      storageClassName: nfs
     sidecar:
       datasources:
         enabled: true

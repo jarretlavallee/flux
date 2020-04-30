@@ -20,4 +20,4 @@ spec:
           external-dns.alpha.kubernetes.io/hostname: prometheus.hubnut.ga
           external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
       persistentVolume:
-        storageClass: standard
+        storageClass: nfs
