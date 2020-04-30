@@ -1,0 +1,23 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: nfs-client-provisioner
+  namespace: infra
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: nfs-client-provisioner
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com
+    name: nfs-client-provisioner
+    version: 1.2.8
+  values:
+    nfs:
+      server: 192.168.5.49
+      path: /data
+    replicaCount: 2
+    storageClass:
+      name: nfs
+      defaultClass: true
