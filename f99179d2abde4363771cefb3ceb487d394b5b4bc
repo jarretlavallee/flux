@@ -1,0 +1,1 @@
+{"jobID":"783420e7-a77f-248b-fe85-e0ee29479075","spec":{"type":"policy","cause":{"Message":"","User":"Jarret Lavallee \u003cjarret.lavallee@puppet.com\u003e"},"spec":{"infra:helmrelease/external-dns":{"add":{"locked":"true","locked_msg":"","locked_user":"Jarret Lavallee \u003cjarret.lavallee@puppet.com\u003e"},"remove":{}}}},"result":null}
