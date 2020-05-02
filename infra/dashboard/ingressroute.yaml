@@ -6,7 +6,7 @@ metadata:
   namespace: infra
 spec:
   routes:
-    - match: Host(`dashboard.hubnut.ga`)
+    - match: HostRegexp(`{host:^dashboard.*}`)
       kind: Rule
       services:
         - name: kubernetes-dashboard

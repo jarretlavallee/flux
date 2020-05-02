@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`traefik.hubnut.ga`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+    - match: HostRegexp(`{host:^traefik.*}`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
       kind: Rule
       services:
         - name: api@internal

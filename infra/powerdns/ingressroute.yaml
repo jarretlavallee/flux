@@ -1,0 +1,20 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: traefik
+  creationTimestamp: null
+  name: powerdns
+  namespace: default
+spec:
+  entryPoints: []
+  routes:
+  - kind: Rule
+    match: HostRegexp(`{host:^powerdns.*}`)
+    middlewares: []
+    priority: 0
+    services:
+    - kind: Service
+      name: powerdns-service-admin
+      namespace: default
+      port: 9191

@@ -6,7 +6,7 @@ metadata:
   namespace: infra
 spec:
   routes:
-    - match: Host(`consul.hubnut.ga`)
+    - match: HostRegexp(`{host:^consul.*}`)
       kind: Rule
       services:
         - name: consul-consul-ui

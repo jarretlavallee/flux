@@ -6,7 +6,7 @@ metadata:
   namespace: monitoring
 spec:
   routes:
-    - match: Host(`grafana.hubnut.ga`)
+    - match: HostRegexp(`{host:^grafana.*}`)
       kind: Rule
       services:
         - name: grafana
