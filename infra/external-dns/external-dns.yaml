@@ -7,8 +7,6 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:*
-    fluxcd.io/locked_user: Jarret Lavallee <jarret.lavallee@puppet.com>
-    fluxcd.io/locked: 'true'
 spec:
   releaseName: external-dns
   chart:
