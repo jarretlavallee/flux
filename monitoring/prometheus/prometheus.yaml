@@ -17,7 +17,7 @@ spec:
     server:
       service:
         annotations:
-          external-dns.alpha.kubernetes.io/hostname: prometheus.hubnut.ga
-          external-dns.alpha.kubernetes.io/target: traefik.hubnut.ga
+          external-dns.alpha.kubernetes.io/hostname: prometheus.home.lab
+          external-dns.alpha.kubernetes.io/target: traefik.home.lab
       persistentVolume:
         storageClass: nfs

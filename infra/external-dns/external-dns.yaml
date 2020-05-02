@@ -14,11 +14,17 @@ spec:
     name: external-dns
     version: 2.21.2
   values:
-    provider: cloudflare
-    cloudflare:
-      secretName: external-dns-cloudflare
-      apiToken: noop
-      proxied: false
+    provider: pdns
+    pdns:
+      apiUrl: http://powerdns-service-api
+      apiPort: "8081"
+      apiKey:  "from secret"
+    extraEnv:
+      - name: PDNS_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: powerdns-secret
+            key: PDNS_APIKEY
     metrics:
       enabled: true
       podAnnotations:

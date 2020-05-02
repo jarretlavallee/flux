@@ -21,7 +21,7 @@ spec:
       type: LoadBalancer
       loadBalancerIP: 192.168.5.89
       annotations:
-        external-dns.alpha.kubernetes.io/hostname: unifi.hubnut.ga
+        external-dns.alpha.kubernetes.io/hostname: unifi.home.lab
         metallb.universe.tf/allow-shared-ip: "unifi"
     controllerService:
       enabled: true

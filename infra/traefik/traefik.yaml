@@ -16,7 +16,7 @@ spec:
   values:
     service:
       annotations:
-        external-dns.alpha.kubernetes.io/hostname: traefik.hubnut.ga
+        external-dns.alpha.kubernetes.io/hostname: traefik.home.lab
     additionalArguments:
       - "--api.insecure=true"
       - "--metrics.prometheus.addServicesLabels=true"
