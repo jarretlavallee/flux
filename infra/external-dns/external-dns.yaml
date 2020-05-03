@@ -31,3 +31,4 @@ spec:
         prometheus.io/scrape: "true"
         prometheus.io/port: "7979"
     policy: sync
+    logLevel: debug
