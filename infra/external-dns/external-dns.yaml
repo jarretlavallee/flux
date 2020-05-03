@@ -32,3 +32,4 @@ spec:
         prometheus.io/port: "7979"
     policy: sync
     logLevel: debug
+    txtPrefix: txt-
