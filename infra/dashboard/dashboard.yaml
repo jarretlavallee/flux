@@ -25,6 +25,6 @@ spec:
       enabled: true
     ingress:
       enabled: true
-      #      annotations:
-      #        external-dns.alpha.kubernetes.io/hostname: dashboard.home.lab
-      #        external-dns.alpha.kubernetes.io/target: traefik.home.lab
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: dashboard.home.lab
+        external-dns.alpha.kubernetes.io/target: traefik.home.lab
