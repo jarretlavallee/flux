@@ -5,7 +5,7 @@ metadata:
     kubernetes.io/ingress.class: traefik
   creationTimestamp: null
   name: powerdns
-  namespace: default
+  namespace: infra
 spec:
   entryPoints: []
   routes:
