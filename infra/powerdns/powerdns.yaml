@@ -10,16 +10,18 @@ metadata:
 spec:
   releaseName: powerdns
   chart:
-    git: https://github.com/aescanero/helm-powerdns
-    ref: master
+    git: https://github.com/jarretlavallee/helm-powerdns
+    ref: feat/master/updates
     path: powerdns
   values:
     powerdns:
       domain: home.lab
       default_soa_name: ns1.home.lab
-    #  service:
-    #    dns:
-    #      loadBalancerIP: 192.168.5.90
+      service:
+        dns:
+          loadBalancerIP: 192.168.5.90
+          annotations:
+            external-dns.alpha.kubernetes.io/hostname: ns1.home.lab
     powerdnsadmin:
       service:
         type: ClusterIP
