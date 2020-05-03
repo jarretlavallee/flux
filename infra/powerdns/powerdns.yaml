@@ -25,3 +25,6 @@ spec:
     powerdnsadmin:
       service:
         type: ClusterIP
+        annotations:
+          external-dns.alpha.kubernetes.io/hostname: powerdns.home.lab
+          external-dns.alpha.kubernetes.io/target: traefik.home.lab
