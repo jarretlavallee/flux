@@ -15,7 +15,7 @@ spec:
     version: 11.1.2
   values:
     server:
-      service:
+      ingress:
         annotations:
           external-dns.alpha.kubernetes.io/hostname: prometheus.home.lab
           external-dns.alpha.kubernetes.io/target: traefik.home.lab

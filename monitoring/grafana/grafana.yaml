@@ -14,10 +14,6 @@ spec:
     name: grafana
     version: 5.0.13
   values:
-    service:
-      annotations:
-        external-dns.alpha.kubernetes.io/hostname: grafana.home.lab
-        external-dns.alpha.kubernetes.io/target: traefik.home.lab
     persistence:
       storageClassName: nfs
     sidecar:
@@ -27,3 +23,9 @@ spec:
       dashboards:
         enabled: true
         label: grafana_dashboard
+    ingress:
+      enabled: true
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: grafana.home.lab
+        external-dns.alpha.kubernetes.io/target: traefik.home.lab
+
