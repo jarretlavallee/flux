@@ -10,12 +10,12 @@ kubectl apply -f local/sealed-secrets-key.yaml
 helm install --namespace kube-system sealed-secrets stable/sealed-secrets
 
 # Setup Flux
-kubectl apply -f namespaces/flux.yaml
+kubectl apply -f flux/namespace.yaml
 kubectl apply -f flux/flux-ssh.yaml
 helm repo add fluxcd https://charts.fluxcd.io
 helm upgrade -i flux fluxcd/flux \
   --namespace flux \
-  --set git.url=git@github.com:jarretlavallee/flux \
+  --set git.url=ssh://git@github.com/jarretlavallee/flux.git \
   --set git.secretName=flux-ssh \
   --set syncGarbageCollection.enabled=true
 
