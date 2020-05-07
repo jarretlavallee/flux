@@ -16,7 +16,7 @@ spec:
   values:
     nfs:
       server: 192.168.5.41
-      path: /mnt/data
+      path: /mnt/data/media
     replicaCount: 2
     storageClass:
       name: media
