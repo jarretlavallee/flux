@@ -21,3 +21,4 @@ spec:
     storageClass:
       name: nfs
       defaultClass: true
+      reclaimPolicy: Retain
