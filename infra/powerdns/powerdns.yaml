@@ -28,9 +28,6 @@ spec:
           loadBalancerIP: 192.168.5.90
           annotations:
             metallb.universe.tf/allow-shared-ip: "powerdns"
-      extravars:
-        - name: PDNS_forward-zones-recurse
-          value: '.=1.1.1.1'
     powerdnsadmin:
       service:
         type: ClusterIP
