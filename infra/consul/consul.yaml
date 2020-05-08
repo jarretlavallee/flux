@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: consul
   chart:
-    git: https://github.com/hashicorp/consul-helm
+    git: https://github.com./hashicorp/consul-helm
     name: consul
     path: .
     ref: v0.20.1

@@ -10,7 +10,7 @@ metadata:
 spec:
   releaseName: powerdns
   chart:
-    git: https://github.com/jarretlavallee/helm-powerdns
+    git: https://github.com./jarretlavallee/helm-powerdns
     ref: feat/master/updates
     path: powerdns
   values:
