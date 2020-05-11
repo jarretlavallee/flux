@@ -1,0 +1,54 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: plex
+  namespace: media
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.chart-image: 'regexp:^(1\.[0-9]+\.[0-9]+\.[0-9]+-.*)$'
+spec:
+  releaseName: plex
+  helmVersion: v3
+  rollback:
+    enable: false
+  chart:
+    repository: https://billimek.com/billimek-charts/
+    name: plex
+    version: 1.3.0
+  values:
+    timezone: "America/Denver"
+    image:
+      tag: latest
+    ingress:
+      enabled: true
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: plex.home.lab
+        external-dns.alpha.kubernetes.io/target: traefik.home.lab
+        traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+      hosts:
+        - plex.home.lab
+    persistence:
+      transcode:
+        enabled: true
+        storageClass: "nfs"
+      data:
+        enabled: true
+        claimName: plex-media-pvc
+      config:
+        storageClass: "nfs"
+    claimToken: noop
+    advertiseIp: 'http://plex.home.lab'
+    plexPreferences:
+      enabled: true
+    extraEnv:
+      PLEX_PREFERENCE_1: "FriendlyName=farts"
+      PLEX_PREFERENCE_2: "EnableIPv6=0"
+      PLEX_PREFERENCE_3: "logDebug=0"
+      PLEX_PREFERENCE_4: "sendCrashReports=0"
+      PLEX_PREFERENCE_5: "secureConnections=1"
+      PLEX_PREFERENCE_6: "ScheduledLibraryUpdatesEnabled=1"
+      PLEX_PREFERENCE_7: "FSEventLibraryUpdatesEnabled=1"
+      PLEX_PREFERENCE_8: "FSEventLibraryPartialScanEnabled=1"
+      PLEX_PREFERENCE_9: "AcceptedEULA=1"
+      PLEX_PREFERENCE_10: 'customConnections="http://plex.home.lab"'
