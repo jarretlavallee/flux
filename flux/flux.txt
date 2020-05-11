@@ -1,0 +1,9 @@
+git:
+  url: git@github.com:jarretlavallee/flux
+  secretName: flux-ssh
+syncGarbageCollection:
+  enabled: true
+dnsConfig:
+  options:
+    - name: ndots
+      value: "1"
