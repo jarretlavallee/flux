@@ -1,0 +1,33 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: tautulli
+  namespace: media
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.chart-image: 'regexp:^(1\.[0-9]+\.[0-9]+\.[0-9]+-.*)$'
+spec:
+  releaseName: tautulli
+  helmVersion: v3
+  rollback:
+    enable: false
+  chart:
+    repository: https://billimek.com/billimek-charts/
+    name: tautulli
+    version: 2.2.0
+  values:
+    timezone: "America/Denver"
+    image:
+      tag: latest
+    ingress:
+      enabled: true
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: tautulli.home.lab
+        external-dns.alpha.kubernetes.io/target: traefik.home.lab
+        traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+      hosts:
+        - tautulli.home.lab
+    persistence:
+      config:
+        storageClass: "nfs"
