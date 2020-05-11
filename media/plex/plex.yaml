@@ -51,4 +51,4 @@ spec:
       PLEX_PREFERENCE_7: "FSEventLibraryUpdatesEnabled=1"
       PLEX_PREFERENCE_8: "FSEventLibraryPartialScanEnabled=1"
       PLEX_PREFERENCE_9: "AcceptedEULA=1"
-      PLEX_PREFERENCE_10: 'customConnections="http://plex.home.lab"'
+      PLEX_PREFERENCE_10: "customConnections=http://plex.home.lab"
