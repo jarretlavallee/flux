@@ -42,7 +42,7 @@ spec:
     plexPreferences:
       enabled: true
     extraEnv:
-      PLEX_PREFERENCE_1: "FriendlyName=farts"
+      PLEX_PREFERENCE_1: "FriendlyName=k8splex"
       PLEX_PREFERENCE_2: "EnableIPv6=0"
       PLEX_PREFERENCE_3: "logDebug=0"
       PLEX_PREFERENCE_4: "sendCrashReports=0"
