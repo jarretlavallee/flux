@@ -31,6 +31,8 @@ spec:
     powerdnsadmin:
       # Disable powerdnsadmin. It deletes the tables when the container is restarted.
       enabled: false
+      ingress:
+        enabled: false
       #      service:
       #        type: ClusterIP
       #        annotations:
