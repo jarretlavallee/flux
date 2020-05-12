@@ -29,15 +29,17 @@ spec:
           annotations:
             metallb.universe.tf/allow-shared-ip: "powerdns"
     powerdnsadmin:
-      service:
-        type: ClusterIP
-        annotations:
-      ingress:
-        enabled: true
-        hostname: powerdns
-        class: ""
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
-          external-dns.alpha.kubernetes.io/hostname: powerdns.home.lab
-          external-dns.alpha.kubernetes.io/target: traefik.home.lab
+      # Disable powerdnsadmin. It deletes the tables when the container is restarted.
+      enabled: false
+      #      service:
+      #        type: ClusterIP
+      #        annotations:
+      #      ingress:
+      #        enabled: true
+      #        hostname: powerdns
+      #        class: ""
+      #        annotations:
+      #          traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+      #          external-dns.alpha.kubernetes.io/hostname: powerdns.home.lab
+      #          external-dns.alpha.kubernetes.io/target: traefik.home.lab
 
