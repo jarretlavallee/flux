@@ -2,23 +2,20 @@
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: flux-web
+  name: flux-ui
   namespace: flux
   annotations:
     fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:*
 spec:
-  releaseName: flux-web
+  releaseName: flux-ui
   chart:
-    git: git@github.com:flux-web/flux-web.git
-    path: chart/flux-web
+    git: https://github.com/sureshamk/flux-ui
+    path: flux-ui
     ref: master
   values:
-    frontend:
-        env:
-          API_EXTERNAL_URL: //flux.home.lab/api/v1
-          WS_URL: wss://flux.home.lab/ws/v1
     ingress:
+      enabled: true
       annotations:
         external-dns.alpha.kubernetes.io/hostname: flux.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
@@ -26,6 +23,4 @@ spec:
       hosts:
         - host: flux.home.lab
           paths:
-            - frontend: /
-            - backend: /api
-            - backend: /ws
+            -  /
