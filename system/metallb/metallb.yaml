@@ -5,7 +5,7 @@ metadata:
   name: metallb
   namespace: kube-system
   annotations:
-    fluxcd.io/automated: "false"
+    fluxcd.io/automated: "true"
     filter.fluxcd.io/chart-image: glob:*
 spec:
   releaseName: metallb
@@ -18,7 +18,7 @@ spec:
       scrapeAnnotations: true
     configInline:
       address-pools:
-        - name: default
-          protocol: layer2
-          addresses:
-            - 192.168.5.80-192.168.5.99
+      - name: default
+        protocol: layer2
+        addresses:
+        - 192.168.5.80-192.168.5.99
