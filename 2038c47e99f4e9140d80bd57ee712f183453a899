@@ -1,0 +1,1 @@
+{"jobID":"ae5d0203-4084-4bed-adb4-a99a2b0b3404","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"kube-system:helmrelease/metallb":{"add":{"automated":"true"},"remove":null}}},"result":null}
