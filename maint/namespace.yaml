@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   labels:
     name: maint
+    goldilocks.fairwinds.com/enabled: "true"
   name: maint

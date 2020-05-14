@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   labels:
     name: infra
+    goldilocks.fairwinds.com/enabled: "true"
   name: infra

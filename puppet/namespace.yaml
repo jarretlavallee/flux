@@ -3,4 +3,5 @@ kind: Namespace
 metadata:
   labels:
     name: puppet
+    goldilocks.fairwinds.com/enabled: "true"
   name: puppet
