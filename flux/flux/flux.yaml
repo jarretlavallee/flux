@@ -1,0 +1,26 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: flux
+  namespace: flux
+  annotations:
+    fluxcd.io/automated: "false"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: flux
+  helmVersion: v3
+  chart:
+    repository: https://charts.fluxcd.io/
+    name: flux
+    version: 1.2.0
+  values:
+    git:
+      url: git@github.com:jarretlavallee/flux
+      secretName: flux-ssh
+    syncGarbageCollection:
+      enabled: true
+    dnsConfig:
+      options:
+        - name: ndots
+          value: "1"

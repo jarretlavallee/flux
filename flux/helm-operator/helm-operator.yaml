@@ -1,0 +1,22 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: helm-operator
+  namespace: flux
+  annotations:
+    fluxcd.io/automated: "false"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: helm-operator
+  helmVersion: v3
+  chart:
+    repository: https://charts.fluxcd.io/
+    name: helm-operator
+    version: 1.0.2
+  values:
+    git:
+      ssh:
+        secretName: flux-ssh
+    helm:
+      versions: v3
