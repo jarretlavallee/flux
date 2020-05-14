@@ -20,7 +20,8 @@ spec:
         external-dns.alpha.kubernetes.io/hostname: consul.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
     server:
-      storageClass: nfs
+      storageClass: longhorn
+      storage: 1Gi
     ui:
       type: ClusterIP
     syncCatalog:
