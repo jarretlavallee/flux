@@ -1,0 +1,1 @@
+{"jobID":"01146fd3-1a80-4fd2-07fe-c9193d6e2b90","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"monitoring:deployment/metricbeat":{"add":{"automated":"true"},"remove":null}}},"result":null}
