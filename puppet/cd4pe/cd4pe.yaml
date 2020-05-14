@@ -12,9 +12,13 @@ spec:
   chart:
     repository: https://jarretlavallee.github.io/helm-charts/
     name: cd4pe
-    version: 0.1.0
+    version: 0.1.1
   values:
     service:
       type: LoadBalancer
       annotations:
         external-dns.alpha.kubernetes.io/hostname: cd4pe.home.lab
+    sidecars:
+      - name: smee
+        image: twalter/smee-client:latest
+        args: ["--port", "8000", "--path", "/gitlab/push", "--url", "https://smee.io/paljfWgJ3yRfmmr"]
