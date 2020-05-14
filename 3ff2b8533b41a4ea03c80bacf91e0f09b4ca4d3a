@@ -1,0 +1,1 @@
+{"jobID":"4a874ded-ad5c-e0e7-94fa-c6919b02d9d0","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"monitoring:daemonset/metricbeat":{"add":{"automated":"true"},"remove":null}}},"result":null}
