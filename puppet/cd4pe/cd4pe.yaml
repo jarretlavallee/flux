@@ -18,6 +18,10 @@ spec:
       type: LoadBalancer
       annotations:
         external-dns.alpha.kubernetes.io/hostname: cd4pe.home.lab
+    uniqueIdSecret: cd4pe-postgresql-secret
+    uniqueIdSecretKey: uniqueId
+    postgresql:
+      existingSecret: cd4pe-postgresql-secret
     sidecars:
       - name: smee
         image: twalter/smee-client:latest
