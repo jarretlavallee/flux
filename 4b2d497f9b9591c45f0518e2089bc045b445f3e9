@@ -1,0 +1,1 @@
+{"jobID":"cd8d4587-acd3-47a4-ffed-5c20db48cbe2","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"kube-system:deployment/kube-state-metrics":{"add":{"automated":"true"},"remove":null}}},"result":null}
