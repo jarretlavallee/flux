@@ -18,6 +18,8 @@ spec:
       type: LoadBalancer
       annotations:
         external-dns.alpha.kubernetes.io/hostname: cd4pe.home.lab
+    dbPasswordSecret: cd4pe-postgresql-secret
+    dbPasswordSecretKey: postgresql-password
     uniqueIdSecret: cd4pe-postgresql-secret
     uniqueIdSecretKey: uniqueId
     postgresql:
