@@ -52,3 +52,6 @@ spec:
       PLEX_PREFERENCE_8: "FSEventLibraryPartialScanEnabled=1"
       PLEX_PREFERENCE_9: "AcceptedEULA=1"
       PLEX_PREFERENCE_10: "customConnections=http://plex.home.lab"
+      PLEX_PREFERENCE_11: "LanNetworksBandwidth=172.16.0.0/16,192.168.0.0/16,10.0.0.0/8"
+      PLEX_PREFERENCE_12: "allowedNetworks=172.16.0.0/16,192.168.0.0/16,10.0.0.0/8"
+      PLEX_PREFERENCE_13: "TranscoderThrottleBuffer=300"
