@@ -33,3 +33,5 @@ spec:
     policy: sync
     logLevel: debug
     txtPrefix: txt-
+    podAnnotations:
+      secret.reloader.stakater.com/reload: "powerdns-secret"
