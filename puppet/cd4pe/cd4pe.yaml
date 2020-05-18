@@ -26,5 +26,5 @@ spec:
       existingSecret: cd4pe-postgresql-secret
     sidecars:
       - name: smee
-        image: deltaprojects/smee-client
+        image: deltaprojects/smee-client:latest
         args: ["--port", "8000", "--path", "/gitlab/push", "--url", "https://smee.io/paljfWgJ3yRfmmr"]
