@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Validate Helm Releases in system namespace
+      - name: Validate Helm Releases in all namespaces
         uses: stefanprodan/hrval-action@v3.2.0
         with:
-          helmRelease: system/
-          helmVersion: v3
+          helmRelease: ./
+          #          helmVersion: v3
