@@ -14,6 +14,9 @@ spec:
     name: unifi
     version: 0.7.0
   values:
+    image:
+      tag: latest
+      pullPolicy: Always
     persistence:
       existingClaim: data-unifi
     guiService:
