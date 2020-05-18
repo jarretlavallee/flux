@@ -13,3 +13,7 @@ spec:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: metrics-server
     version: 2.11.1
+  values:
+    args:
+      - --kubelet-insecure-tls
+      - --kubelet-preferred-address-types=InternalIP,Hostname,InternalDNS,ExternalDNS,ExternalIP
