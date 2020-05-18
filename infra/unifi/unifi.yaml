@@ -46,8 +46,7 @@ spec:
         metallb.universe.tf/allow-shared-ip: "unifi"
     resources:
       limits:
-        cpu: 35m
-        memory: 640Mi
+        memory: 750Mi
       requests:
         cpu: 35m
         memory: 640Mi

@@ -24,8 +24,7 @@ spec:
       - "--providers.kubernetesingress"
     resources:
         limits:
-          cpu: 25m
-          memory: 250Mi
+          memory: 500Mi
         requests:
           cpu: 25m
           memory: 250Mi
