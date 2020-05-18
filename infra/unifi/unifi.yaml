@@ -44,3 +44,10 @@ spec:
       loadBalancerIP: 192.168.5.89
       annotations:
         metallb.universe.tf/allow-shared-ip: "unifi"
+    resources:
+      limits:
+        cpu: 35m
+        memory: 640Mi
+      requests:
+        cpu: 35m
+        memory: 640Mi

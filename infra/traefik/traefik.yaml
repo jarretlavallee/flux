@@ -22,3 +22,10 @@ spec:
       - "--metrics.prometheus.addServicesLabels=true"
       - "--metrics.prometheus=true"
       - "--providers.kubernetesingress"
+    resources:
+        limits:
+          cpu: 25m
+          memory: 250Mi
+        requests:
+          cpu: 25m
+          memory: 250Mi

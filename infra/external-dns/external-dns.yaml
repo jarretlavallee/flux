@@ -34,3 +34,10 @@ spec:
       secret.reloader.stakater.com/reload: "powerdns-secret"
       prometheus.io/scrape: "true"
       prometheus.io/port: "7979"
+    resources:
+      limits:
+        cpu: 25m
+        memory: 250Mi
+      requests:
+        cpu: 25m
+        memory: 250Mi

@@ -28,3 +28,10 @@ spec:
       annotations:
         external-dns.alpha.kubernetes.io/hostname: dashboard.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
+    resources:
+        limits:
+          cpu: 25m
+          memory: 250Mi
+        requests:
+          cpu: 25m
+          memory: 250Mi
