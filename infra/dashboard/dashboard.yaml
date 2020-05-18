@@ -17,7 +17,7 @@ spec:
     service:
       externalPort: 80
     metrics-server:
-      enabled: true
+      enabled: false
     protocolHttp: true
     rbac:
       clusterReadOnlyRole: true
