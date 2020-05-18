@@ -27,11 +27,10 @@ spec:
             key: PDNS_APIKEY
     metrics:
       enabled: true
-      podAnnotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/port: "7979"
     policy: sync
     logLevel: debug
     txtPrefix: txt-
     podAnnotations:
       secret.reloader.stakater.com/reload: "powerdns-secret"
+      prometheus.io/scrape: "true"
+      prometheus.io/port: "7979"
