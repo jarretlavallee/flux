@@ -10,15 +10,16 @@ metadata:
 spec:
   releaseName: influxdb
   chart:
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://helm.influxdata.com/
     name: influxdb
-    version: 0.4.7
+    version: 4.4.10
   values:
-    database: puppet_metrics
+    env:
+      - name: INFLUXDB_DB
+        value: puppet_metrics
     ingress:
       enabled: true
-      hosts:
-        - name: influxdb.home.lab
+      hostname: influxdb.home.lab
       annotations:
         external-dns.alpha.kubernetes.io/hostname: influxdb.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
