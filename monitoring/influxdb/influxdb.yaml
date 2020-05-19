@@ -1,0 +1,26 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: influxdb
+  namespace: monitoring
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: glob:*
+spec:
+  releaseName: influxdb
+  chart:
+    repository: https://charts.bitnami.com/bitnami
+    name: influxdb
+    version: 0.4.7
+  values:
+    database: puppet_metrics
+    authEnabled: false
+    ingress:
+      enabled: true
+      hosts:
+        - name: influxdb.home.lab
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: influxdb.home.lab
+        external-dns.alpha.kubernetes.io/target: traefik.home.lab
+        traefik.ingress.kubernetes.io/router.entrypoints: web
