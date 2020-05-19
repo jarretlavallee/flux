@@ -14,9 +14,10 @@ data:
       access: proxy
       orgId: 1
       url: http://prometheus-server.monitoring.svc.cluster.local
-    - name: puppet_metrics
+    - name: influxdb_puppet_metrics
       type: influxdb
       access: proxy
       orgId: 1
-      url: http://influxdb.monitoring.svc.cluster.local:8086
+      url: "http://influxdb:8086"
       database: puppet_metrics
+      editable: true
