@@ -14,20 +14,56 @@ spec:
     name: grafana
     version: 5.0.13
   values:
-    persistence:
-      storageClassName: nfs
-    sidecar:
-      datasources:
-        enabled: true
-        label: grafana_datasource
-      dashboards:
-        enabled: true
-        label: grafana_dashboard
     ingress:
       enabled: true
       hosts:
         - grafana.home.lab
       annotations:
-        #external-dns.alpha.kubernetes.io/hostname: grafana.home.lab
+        external-dns.alpha.kubernetes.io/hostname: grafana.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
+    persistence:
+      enabled: true
+    admin:
+      existingSecret: grafana-admin
+    datasources:
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+        - name: Prometheus
+          type: prometheus
+          access: proxy
+          orgId: 1
+          url: http://prometheus-server.monitoring.svc.cluster.local
+        - name: influxdb_puppet_metrics
+          type: influxdb
+          access: proxy
+          orgId: 1
+          url: http://influxdb:8086
+          database: puppet_metrics
+          editable: true
+          isDefault: true
+    dashboards:
+      influxdb_puppet_metrics:
+        puppetserver-performance:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Puppetserver_Performance.json
+        puppetserver-jvm-performance:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Puppetserver_JVM_Performance.json
+        puppetdb-workload:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/PuppetDB_Workload.json
+        puppetdb-performance:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/PuppetDB_Performance.json
+        puppetdb-jvm-performance:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/PuppetDB_JVM_Performance.json
+        process-system-stats:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Process_System_Stats.json
+        orchestrator-jvm-performance:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Orchestrator_JVM_Performance.json
+        orchestration-services:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Orchestration_Services.json
+        bolt-puma:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Bolt_Puma_Performance.json
+        file-sync:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Archive_File_Sync.json
+        ace-puma:
+          url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Ace_Puma_Performance.json
 
