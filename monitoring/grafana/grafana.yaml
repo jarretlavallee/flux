@@ -30,4 +30,5 @@ spec:
       annotations:
         #external-dns.alpha.kubernetes.io/hostname: grafana.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
-
+    plugins:
+      - kubernetes-app
