@@ -256,8 +256,6 @@ metadata:
   namespace: monitoring
   labels:
     k8s-app: metricbeat
-  annotations:
-    fluxcd.io/automated: 'true'
 spec:
   selector:
     matchLabels:
