@@ -118,7 +118,7 @@ spec:
       dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: metricbeat
-        image: docker.elastic.co/beats/metricbeat:7.7-SNAPSHOT
+        image: docker.elastic.co/beats/metricbeat:6.8-SNAPSHOT
         args: ["-c", "/etc/metricbeat.yml", "-e", "-system.hostfs=/hostfs", "-d",
           "autodiscover", "-d", "kubernetes"]
         env:
@@ -274,7 +274,7 @@ spec:
       dnsPolicy: ClusterFirstWithHostNet
       containers:
       - name: metricbeat
-        image: docker.elastic.co/beats/metricbeat:7.7-SNAPSHOT
+        image: docker.elastic.co/beats/metricbeat:6.8-SNAPSHOT
         args: ["-c", "/etc/metricbeat.yml", "-e", "-d", "autodiscover"]
         env:
         - name: ELASTICSEARCH_HOST
