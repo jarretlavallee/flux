@@ -1,0 +1,1 @@
+{"jobID":"1039e6da-d06e-b4de-223a-857238c84514","spec":{"type":"policy","cause":{"Message":"","User":""},"spec":{"monitoring:daemonset/filebeat":{"add":null,"remove":{"automated":"true"}}}},"result":null}
