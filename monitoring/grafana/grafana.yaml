@@ -42,8 +42,20 @@ spec:
           database: puppet_metrics
           editable: true
           isDefault: true
+    dashboardProviders:
+      dashboardproviders.yaml:
+        apiVersion: 1
+        providers:
+        - name: 'default'
+          orgId: 1
+          folder: ''
+          type: file
+          disableDeletion: false
+          editable: true
+          options:
+            path: /var/lib/grafana/dashboards/default
     dashboards:
-      influxdb_puppet_metrics:
+      default:
         puppetserver-performance:
           url: https://raw.githubusercontent.com/puppetlabs/puppet_metrics_dashboard/master/files/Puppetserver_Performance.json
         puppetserver-jvm-performance:
