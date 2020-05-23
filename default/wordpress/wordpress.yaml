@@ -17,6 +17,8 @@ spec:
     name: wordpress
     version: 9.3.3
   values:
+    service:
+      type: ClusterIP
     wordpressPassword: homelab
     timezone: "America/Denver"
     ingress:
