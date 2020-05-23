@@ -29,9 +29,10 @@ spec:
     timezone: "America/Denver"
     ingress:
       enabled: true
+      hosts:
+        - name: ghost.home.lab
+    service:
       annotations:
         external-dns.alpha.kubernetes.io/hostname: ghost.home.lab
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
         traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
-      hosts:
-        - name: ghost.home.lab
