@@ -22,10 +22,10 @@ spec:
     ghostHost: ghost.home.lab
     ghostPort: 80
     ghostProtocol: http
-    ghostPassword: homelab
+    ghostPassword: homelab123
     mariadb:
       db:
-        password: homelab
+        password: homelab123
     timezone: "America/Denver"
     ingress:
       enabled: true
