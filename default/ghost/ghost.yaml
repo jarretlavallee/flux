@@ -19,6 +19,10 @@ spec:
   values:
     service:
       type: ClusterIP
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: ghost.home.lab
+        external-dns.alpha.kubernetes.io/target: traefik.home.lab
+        traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
     ghostHost: ghost.home.lab
     ghostPort: 80
     ghostProtocol: http
@@ -31,8 +35,3 @@ spec:
       enabled: true
       hosts:
         - name: ghost.home.lab
-    service:
-      annotations:
-        external-dns.alpha.kubernetes.io/hostname: ghost.home.lab
-        external-dns.alpha.kubernetes.io/target: traefik.home.lab
-        traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
