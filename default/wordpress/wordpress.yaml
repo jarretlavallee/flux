@@ -20,6 +20,9 @@ spec:
     service:
       type: ClusterIP
     wordpressPassword: homelab
+    mariadb:
+      db:
+        password: homelab
     timezone: "America/Denver"
     ingress:
       enabled: true

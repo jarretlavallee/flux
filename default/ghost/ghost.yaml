@@ -17,10 +17,15 @@ spec:
     name: ghost
     version: 10.0.5
   values:
+    service:
+      type: ClusterIP
     ghostHost: ghost.home.lab
     ghostPort: 80
     ghostProtocol: http
     ghostPassword: homelab
+    mariadb:
+      db:
+        password: homelab
     timezone: "America/Denver"
     ingress:
       enabled: true
