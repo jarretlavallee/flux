@@ -29,4 +29,4 @@ spec:
         external-dns.alpha.kubernetes.io/target: traefik.home.lab
         traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
       hosts:
-      - ghost.home.lab
+        - name: ghost.home.lab
