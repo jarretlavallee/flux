@@ -12,7 +12,7 @@ spec:
   chart:
     repository: https://jarretlavallee.github.io/helm-charts/
     name: cd4pe
-    version: 0.1.1
+    version: 0.1.2
   values:
     service:
       type: LoadBalancer
