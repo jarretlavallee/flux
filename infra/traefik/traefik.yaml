@@ -12,7 +12,7 @@ spec:
   chart:
     repository: https://containous.github.io/traefik-helm-chart
     name: traefik
-    version: 8.1.4
+    version: 8.8.1
   values:
     service:
       annotations:
