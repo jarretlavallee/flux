@@ -14,6 +14,8 @@ spec:
     name: cd4pe
     version: 0.1.2
   values:
+    image:
+      tag: 4.0.0
     service:
       type: LoadBalancer
       annotations:
