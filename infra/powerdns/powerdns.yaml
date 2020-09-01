@@ -14,6 +14,9 @@ spec:
     ref: fix/master/inno
     path: charts/powerdns
   values:
+    mariadb:
+      persistence:
+        enabled: true
     domain: home.lab
     powerdns:
       domain: home.lab
