@@ -27,11 +27,12 @@ spec:
             loadBalancerIP: 192.168.5.90
             annotations:
               metallb.universe.tf/allow-shared-ip: "powerdns"
-                #    api:
-                #      type: LoadBalancer
-                #      loadBalancerIP: 192.168.5.90
-                #      annotations:
-                #        metallb.universe.tf/allow-shared-ip: "powerdns"
+          api:
+            type: LoadBalancer
+            port: 8080
+              #loadBalancerIP: 192.168.5.90
+            annotations:
+               metallb.universe.tf/allow-shared-ip: "powerdns"
     powerdnsadmin:
       # Disable powerdnsadmin. It deletes the tables when the container is restarted.
       enabled: false
