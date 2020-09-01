@@ -28,6 +28,8 @@ spec:
           loadBalancerIP: 192.168.5.90
           annotations:
             metallb.universe.tf/allow-shared-ip: "powerdns"
+    mariadb:
+      args:  "--bind-address=0.0.0.0 --innodb_use_native_aio=0 --innodb_flush_method=fsync"
     powerdnsadmin:
       # Disable powerdnsadmin. It deletes the tables when the container is restarted.
       enabled: false
