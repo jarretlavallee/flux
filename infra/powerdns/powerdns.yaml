@@ -10,7 +10,8 @@ metadata:
 spec:
   releaseName: powerdns
   chart:
-    git: https://github.com/aescanero/helm-charts
+    git: https://github.com/jarretlavallee/helm-powerdns
+    ref: fix/master/inno
     path: charts/powerdns
   values:
     domain: home.lab
