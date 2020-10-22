@@ -17,6 +17,8 @@ spec:
     mariadb:
       persistence:
         enabled: true
+      image:
+        tag: 10.5.5
     domain: home.lab
     powerdns:
       domain: home.lab
