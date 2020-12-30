@@ -14,13 +14,13 @@ kubectl apply -f flux/namespace.yaml
 kubectl apply -f flux/flux-ssh.yaml
 helm repo add fluxcd https://charts.fluxcd.io
 # https://github.com/fluxcd/flux/issues/3011
-helm upgrade -i flux fluxcd/flux --namespace flux -f flux/flux/flux.txt --version 1.2.0
+helm upgrade -i flux fluxcd/flux --namespace flux -f flux/flux/flux.txt --version 1.6.0
 #  --set git.url=git@github.com:jarretlavallee/flux \
 #  --set git.secretName=flux-ssh \
 #  --set syncGarbageCollection.enabled=true \
 #  --set 'dnsConfig.options[0].name=ndots' \
 #  --set 'dnsConfig.options[0].value=1' \
-#  --version 1.2.0
+#  --version 1.6.0
 
 helm upgrade -i helm-operator fluxcd/helm-operator \
   --namespace flux \
