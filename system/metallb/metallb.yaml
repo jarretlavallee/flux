@@ -10,12 +10,10 @@ metadata:
 spec:
   releaseName: metallb
   chart:
-    repository: https://kubernetes-charts.storage.googleapis.com/
+    repository: https://charts.bitnami.com/bitnami
     name: metallb
-    version: 0.12.0
+    version: 2.0.2
   values:
-    prometheus:
-      scrapeAnnotations: true
     configInline:
       address-pools:
       - name: default
