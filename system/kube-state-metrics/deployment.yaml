@@ -21,7 +21,7 @@ spec:
         app.kubernetes.io/version: 1.9.5
     spec:
       containers:
-      - image: quay.io/coreos/kube-state-metrics:v2.0.0-beta
+      - image: quay.io/coreos/kube-state-metrics:v1.9.8
         livenessProbe:
           httpGet:
             path: /healthz
